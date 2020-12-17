@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.8.0 on win32)" generated="20201218 01:42:22.141" rpa="false">
+<suite id="s1" name="Hotline" source="D:\Software\Projects_PyCharm\Logika\TestOnRobotFramework\Tests\Hotline">
+<suite id="s1-s1" name="Search iPhone7" source="D:\Software\Projects_PyCharm\Logika\TestOnRobotFramework\Tests\Hotline\Search_iPhone7.robot">
+<kw name="Go to hotline" type="setup">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${HOTLINEPAGE}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20201218 01:42:22.300" level="INFO">Opening browser 'chrome' to base url 'https://www.hotline.ua/'.</msg>
+<status status="PASS" starttime="20201218 01:42:22.300" endtime="20201218 01:42:25.437"></status>
+</kw>
+<status status="PASS" starttime="20201218 01:42:22.300" endtime="20201218 01:42:25.437"></status>
+</kw>
+<test id="s1-s1-t1" name="Some searching on hotline.ua">
+<kw name="Search on hotline.ua">
+<arguments>
+<arg>iPhone 7</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=searchbox</arg>
+<arg>${searchkey}</arg>
+</arguments>
+<msg timestamp="20201218 01:42:25.439" level="INFO">Typing text 'iPhone 7' into text field 'id=searchbox'.</msg>
+<status status="PASS" starttime="20201218 01:42:25.439" endtime="20201218 01:42:25.723"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>id=doSearch</arg>
+</arguments>
+<msg timestamp="20201218 01:42:25.724" level="INFO">Clicking button 'id=doSearch'.</msg>
+<status status="PASS" starttime="20201218 01:42:25.724" endtime="20201218 01:42:25.813"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" starttime="20201218 01:42:25.813" endtime="20201218 01:42:25.814"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//ul[contains(@class,'products-list cell-list')]/li[2]/div[@class='item-info']/p[1]/a</arg>
+</arguments>
+<msg timestamp="20201218 01:42:25.814" level="INFO">Clicking element '//ul[contains(@class,'products-list cell-list')]/li[2]/div[@class='item-info']/p[1]/a'.</msg>
+<status status="PASS" starttime="20201218 01:42:25.814" endtime="20201218 01:42:27.708"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//ul//span[contains(text(),'Где купить')]</arg>
+</arguments>
+<msg timestamp="20201218 01:42:27.708" level="INFO">Clicking element '//ul//span[contains(text(),'Где купить')]'.</msg>
+<status status="PASS" starttime="20201218 01:42:27.708" endtime="20201218 01:42:28.253"></status>
+</kw>
+<status status="PASS" starttime="20201218 01:42:25.438" endtime="20201218 01:42:28.253"></status>
+</kw>
+<status status="PASS" starttime="20201218 01:42:25.438" endtime="20201218 01:42:28.254" critical="yes"></status>
+</test>
+<kw name="Close Browser" library="Selenium2Library" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20201218 01:42:28.255" endtime="20201218 01:42:30.379"></status>
+</kw>
+<status status="PASS" starttime="20201218 01:42:22.162" endtime="20201218 01:42:30.379"></status>
+</suite>
+<status status="PASS" starttime="20201218 01:42:22.142" endtime="20201218 01:42:30.381"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Hotline">Hotline</stat>
+<stat pass="1" fail="0" id="s1-s1" name="Search iPhone7">Hotline.Search iPhone7</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
